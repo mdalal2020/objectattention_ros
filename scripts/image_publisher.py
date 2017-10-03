@@ -18,7 +18,7 @@ def image_publisher():
         # new_msg = Float64MultiArray()
         # new_msg.data = frame
         # pub.publish(new_msg)
-        frame = bridge.cv2_to_imgmsg(frame, encoding="passthrough")
+        frame = bridge.cv2_to_imgmsg(frame, encoding="rgb8")
         pub.publish(frame)
         rate.sleep()
 
